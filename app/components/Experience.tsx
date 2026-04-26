@@ -1,0 +1,56 @@
+'use client'
+import { motion } from 'framer-motion'
+import SectionHeader from './SectionHeader'
+import { useLang } from './LangContext'
+
+const timeline = [
+  { period: '2024', title: 'Freelance Full Stack Developer', sub: 'Startups & SMEs', techs: ['Laravel', 'React', 'React Native', 'WhatsApp API', 'TypeScript'], items: ['$85,000 annual cost savings for clinic management system', 'N8n + Claude AI automation for e-commerce workflows', 'Third-party integrations: WhatsApp API, Google Maps, Stripe'] },
+  { period: '2022 - 2024', title: 'Mobile Apps & Management Systems', sub: 'Enterprise Solutions', techs: ['React Native', 'Laravel', 'MySQL', 'Node.js'], items: ['React Native app for 150-person sales team', 'Salon scheduling reduced no-shows by 40%', 'School management for 800 students'] },
+  { period: '2020 - 2022', title: 'E-commerce & Marketplace', sub: 'Revenue Platforms', techs: ['React', 'Laravel', 'AWS', 'MySQL'], items: ['Fashion e-commerce: $15K to $45K monthly', 'B2B marketplace: $240K first year', 'Event ticketing: 30,000+ tickets, zero fraud'] },
+  { period: '2018 - 2020', title: 'WordPress & Laravel', sub: 'Foundation', techs: ['WordPress', 'Laravel', 'PHP', 'MySQL'], items: ['Education portal: 500+ students, 65% to 82% completion', 'Patient portal: 10,000+ registered patients'] },
+]
+
+export default function Experience() {
+  const { t } = useLang()
+
+  return (
+    <section id="experience" className="relative py-24 overflow-hidden">
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #0b1a30 0%, #0f2240 50%, #0b1a30 100%)' }} />
+      <div className="absolute inset-0 bg-grid" />
+
+      <div className="relative z-10 mx-auto px-6 lg:px-8" style={{ maxWidth: 1200 }}>
+        <SectionHeader subtitle={t.exp.sub} title={t.exp.title} />
+
+        <div className="relative" style={{ maxWidth: 720, margin: '0 auto' }}>
+          <div className="absolute left-[7px] top-2 bottom-2 w-px" style={{ background: 'linear-gradient(180deg, transparent, #1e3a5f 10%, #1e3a5f 90%, transparent)' }} />
+
+          <div className="space-y-10">
+            {timeline.map((e, i) => (
+              <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }}
+                className="relative pl-10">
+                <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.12 + 0.1, type: 'spring', stiffness: 300 }}
+                  className="absolute left-0 top-1.5 w-[15px] h-[15px] rounded-full" style={{ border: '2px solid #8b7cf6', backgroundColor: '#0b1a30' }} />
+
+                <div className="inline-flex rounded-md px-2.5 py-1 text-[11px] font-semibold mb-2" style={{ backgroundColor: 'rgba(139,124,246,0.08)', color: '#8b7cf6', border: '1px solid rgba(139,124,246,0.12)' }}>
+                  {e.period === '2024' ? `2024 - ${t.exp.present}` : e.period}
+                </div>
+                <h3 className="text-[16px] font-bold text-white mb-0.5">{e.title}</h3>
+                <p className="text-[12px] mb-3" style={{ color: '#64748b' }}>{e.sub}</p>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  {e.techs.map(tc => <span key={tc} className="tag text-[10px] py-0.5 px-2">{tc}</span>)}
+                </div>
+                <ul className="space-y-1.5">
+                  {e.items.map((a, j) => (
+                    <li key={j} className="flex items-start gap-2 text-[13px]" style={{ color: '#94a3b8' }}>
+                      <span className="w-1 h-1 rounded-full shrink-0 mt-[7px]" style={{ backgroundColor: '#8b7cf6' }} /> {a}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
