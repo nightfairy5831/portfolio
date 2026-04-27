@@ -40,7 +40,7 @@ export default function Navbar() {
       <div className="mx-auto px-6 lg:px-8" style={{ maxWidth: 1200 }}>
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-lg font-bold text-white font-oswald tracking-wide">
-            Max<span style={{ color: '#8b7cf6' }}>.</span>Li
+            {t.nameFirst}<span style={{ color: '#8b7cf6' }}>.</span>{t.nameLast}
           </a>
 
           <nav className="hidden lg:flex items-center gap-1">

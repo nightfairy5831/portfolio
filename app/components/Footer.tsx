@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto px-6 lg:px-8 py-8" style={{ maxWidth: 1200 }}>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-6">
-            <span className="text-sm font-bold text-white font-oswald">Max<span style={{ color: '#8b7cf6' }}>.</span>Li</span>
+            <span className="text-sm font-bold text-white font-oswald">{t.nameFirst}<span style={{ color: '#8b7cf6' }}>.</span>{t.nameLast}</span>
             <span className="text-[12px]" style={{ color: '#64748b' }}>{t.footer.title}</span>
           </div>
           <div className="flex items-center gap-6">
@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-6 pt-5 text-center" style={{ borderTop: '1px solid #1e3a5f' }}>
-          <p className="text-[11px]" style={{ color: '#475569' }}>&copy; 2025 Max Li. {t.footer.rights}</p>
+          <p className="text-[11px]" style={{ color: '#475569' }}>&copy; 2025 {t.name}. {t.footer.rights}</p>
         </div>
       </div>
     </footer>

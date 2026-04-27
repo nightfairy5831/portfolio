@@ -4,6 +4,9 @@ import { createContext, useContext, useState, ReactNode } from 'react'
 type Lang = 'en' | 'cn'
 
 const en = {
+  name: 'Max Li',
+  nameFirst: 'Max',
+  nameLast: 'Li',
   nav: { about: 'About', skills: 'Skills', services: 'Services', work: 'Work', experience: 'Experience', contact: 'Contact' },
   hero: {
     available: 'Available for Projects',
@@ -55,6 +58,9 @@ const en = {
 }
 
 const cn: typeof en = {
+  name: 'Li Max',
+  nameFirst: 'Li',
+  nameLast: 'Max',
   nav: { about: '关于', skills: '技能', services: '服务', work: '作品', experience: '经历', contact: '联系' },
   hero: {
     available: '可接项目',

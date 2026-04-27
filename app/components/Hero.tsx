@@ -64,7 +64,7 @@ export default function Hero() {
 
           <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] font-oswald tracking-tight mb-4">
-            <span className="shimmer-text">Max Li</span>
+            <span className="shimmer-text">{t.name}</span>
           </motion.h1>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="h-8 flex items-center justify-center mb-6">

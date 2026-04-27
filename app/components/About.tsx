@@ -13,7 +13,7 @@ const images = [
 export default function About() {
   const { t } = useLang()
   const profileInfo = [
-    { icon: User, label: t.about.name, value: 'Max Li' },
+    { icon: User, label: t.about.name, value: t.name },
     { icon: Briefcase, label: t.about.exp, value: '8+ Years' },
     { icon: Mail, label: t.about.email, value: 'maxli980303@gmail.com' },
     { icon: MapPin, label: t.about.loc, value: 'Remote Worldwide' },
