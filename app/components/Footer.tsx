@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-6 pt-5 text-center" style={{ borderTop: '1px solid #1e3a5f' }}>
-          <p className="text-[11px]" style={{ color: '#475569' }}>&copy; 2024 Max Li. {t.footer.rights}</p>
+          <p className="text-[11px]" style={{ color: '#475569' }}>&copy; 2025 Max Li. {t.footer.rights}</p>
         </div>
       </div>
     </footer>
