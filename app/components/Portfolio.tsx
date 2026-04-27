@@ -5,33 +5,27 @@ import { X, Code2 } from 'lucide-react'
 import SectionHeader from './SectionHeader'
 import { useLang } from './LangContext'
 
-type PKey = 'p1'|'p2'|'p3'|'p4'|'p5'|'p6'|'p7'|'p8'|'p9'|'p10'|'p11'|'p12'
+type PKey = 'p1'|'p2'|'p3'|'p4'|'p5'|'p6'|'p7'|'p8'|'p9'
 
 const projectData: { key: PKey; cat: string; img: string; tags: string[] }[] = [
-  // Accessory Shop - jewelry/accessories closeup
-  { key: 'p1', cat: 'E-commerce', img: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&h=450&fit=crop', tags: ['React.js', 'Laravel', 'AWS'] },
-  // Real Estate - modern apartment buildings
-  { key: 'p2', cat: 'Full Stack', img: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=450&fit=crop', tags: ['React', 'Laravel', 'PostgreSQL'] },
-  // Medical Clinic - clean clinic interior
-  { key: 'p3', cat: 'Full Stack', img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=450&fit=crop', tags: ['React', 'Node.js', 'Express'] },
-  // Booking - pet grooming/care
-  { key: 'p4', cat: 'Full Stack', img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&h=450&fit=crop', tags: ['Laravel', 'React', 'MySQL'] },
-  // Fashion - clothing rack/store
-  { key: 'p5', cat: 'E-commerce', img: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&h=450&fit=crop', tags: ['React', 'Node', 'MySQL'] },
-  // Dating/Social - people connecting
-  { key: 'p6', cat: 'Mobile', img: 'https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?w=800&h=450&fit=crop', tags: ['React.js', 'JavaScript'] },
-  // AI Code - code on screen with AI vibe
-  { key: 'p7', cat: 'AI', img: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=450&fit=crop', tags: ['React', 'Django', 'ML'] },
-  // AI/ML tech - neural network / brain visualization
-  { key: 'p8', cat: 'AI', img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=450&fit=crop', tags: ['ML', 'React', 'Python'] },
-  // Chat app - phone with chat bubbles
-  { key: 'p9', cat: 'AI', img: 'https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=450&fit=crop', tags: ['React Native', 'OpenAI'] },
-  // Island game - tropical island scene
-  { key: 'p10', cat: 'Mobile', img: 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&h=450&fit=crop', tags: ['React Native', 'Node.js'] },
-  // Real estate mobile - modern house exterior
-  { key: 'p11', cat: 'Mobile', img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=450&fit=crop', tags: ['React Native', 'WhatsApp'] },
-  // Multiplayer gaming - esports/gaming setup
-  { key: 'p12', cat: 'Full Stack', img: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=450&fit=crop', tags: ['React', 'Socket.IO', 'AWS'] },
+  // Accessory Shop - jewelry e-commerce
+  { key: 'p1', cat: 'E-commerce', img: '/projects/accessory-shop.png', tags: ['React.js', 'Laravel', 'AWS', 'MySQL', 'Redis'] },
+  // Real Estate - web platform
+  { key: 'p2', cat: 'Full Stack', img: '/projects/real-estate.png', tags: ['React.js', 'Laravel', 'PostgreSQL', 'DigitalOcean', 'API'] },
+  // PEGASUS CLINIC - medical website
+  { key: 'p3', cat: 'Full Stack', img: '/projects/pegasus-clinic.png', tags: ['React.js', 'Node.js', 'Express.js', 'HTML', 'JavaScript'] },
+  // Booking & Management - pet care
+  { key: 'p4', cat: 'Full Stack', img: '/projects/booking-system.png', tags: ['Laravel', 'React.js', 'PHP', 'JavaScript', 'MySQL'] },
+  // Fashion Store - e-commerce platform
+  { key: 'p5', cat: 'E-commerce', img: '/projects/fashion-store.png', tags: ['React.js', 'JavaScript', 'Responsive Design', 'HTML', 'PHP'] },
+  // TuruLav - social dating app
+  { key: 'p6', cat: 'Mobile', img: '/projects/turulav.png', tags: ['React.js', 'JavaScript', 'HTML', 'WordPress', 'Android'] },
+  // AI-Powered Developer Tool
+  { key: 'p7', cat: 'AI', img: '/projects/ai-developer-tool.png', tags: ['React.js', 'Django', 'Python', 'ML', 'AI'] },
+  // Axiona AI/ML Technology Website
+  { key: 'p8', cat: 'AI', img: '/projects/axiona-ai.png', tags: ['Machine Learning', 'React.js', 'JavaScript', 'Python', 'Chatbot'] },
+  // AI-Powered Chat Application
+  { key: 'p9', cat: 'AI', img: '/projects/ai-chat-app.png', tags: ['React Native', 'JavaScript', 'Android', 'iOS', 'Chatbot'] },
 ]
 
 export default function Portfolio() {

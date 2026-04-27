@@ -13,6 +13,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
+  icons: { icon: '/icon.svg' },
   title: "Max Li - Senior Full Stack & AI Automation Engineer",
   description:
     "Max Li - Senior Full Stack Engineer with 8+ years specializing in Laravel, React, React Native, and AI Automation. 40+ projects delivered, 20K+ users served.",
